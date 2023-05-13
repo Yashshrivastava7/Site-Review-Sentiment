@@ -15,7 +15,9 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
+  border: solid;
+  border-color: white;
+  width: 92px;
   height: 34px;
 }
 
@@ -32,7 +34,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: black;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -41,7 +43,7 @@
   position: absolute;
   content: "";
   height: 26px;
-  width: 26px;
+  width: 38px;
   left: 4px;
   bottom: 4px;
   background-color: white;
@@ -50,7 +52,7 @@
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: black;
 }
 
 input:focus + .slider {
@@ -58,7 +60,7 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(46px);
+  -ms-transform: translateX(46px);
+  transform: translateX(46px);
 }
