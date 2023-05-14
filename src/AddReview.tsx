@@ -20,11 +20,12 @@ function AddReview() {
       sitename: sitename,
       review: review,
     };
-    const result = await fetch("http://127.0.0.1:8000", {
+    console.log(data);
+    const result = await fetch("http://127.0.0.1:8000/reviews", {
       method: "POST",
       mode: "cors",
       headers: {
-        contentType: "Application/json",
+        "Content-Type": "Application/json",
       },
       body: JSON.stringify(data),
     });
