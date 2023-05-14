@@ -17,10 +17,13 @@
   display: inline-block;
   border: solid;
   border-color: white;
-  box-shadow: 5px 5px 50px 6px cyan;
   transition: box-shadow 0.25s;
   width: 92px;
   height: 34px;
+}
+
+.switch:hover {
+  box-shadow: 5px 5px 50px 6px cyan;
 }
 
 .switch input {
