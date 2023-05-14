@@ -15,11 +15,22 @@ function AddReview() {
   function handleReview(e: any) {
     setReview(e.target.value);
   }
-  function handleClick() {
+  async function handleClick() {
     const data: Review = {
       sitename: sitename,
       review: review,
     };
+    const result = await fetch("http://127.0.0.1:8000", {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        contentType: "Application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    if (result.status != 200) {
+      console.log("Something went wrong");
+    }
     console.log(data);
   }
   return (
