@@ -17,6 +17,8 @@
   display: inline-block;
   border: solid;
   border-color: white;
+  box-shadow: 5px 5px 50px 6px cyan;
+  transition: box-shadow 0.25s;
   width: 92px;
   height: 34px;
 }
@@ -56,7 +58,7 @@ input:checked + .slider {
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px black;
 }
 
 input:checked + .slider:before {
