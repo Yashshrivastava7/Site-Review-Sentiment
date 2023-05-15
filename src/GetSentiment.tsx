@@ -14,7 +14,7 @@ function GetSentiment() {
     setLabel(e.target.value);
   }
   async function handleClick() {
-    const data = await fetch(`http://127.0.0.1:8000/reviews/{sitename}`, {
+    const data = await fetch(`http://127.0.0.1:8000/reviews/${sitename}`, {
       method: "GET",
     });
     if (data.status != 200) {
@@ -39,7 +39,7 @@ function GetSentiment() {
         <input type="text" placeholder="Sitename" onChange={handleChange} />
         <button onClick={handleClick}>Submit</button>
       </div>
-      <div>
+      <div className="review-list">
         <h2>{label}</h2>
       </div>
     </div>
