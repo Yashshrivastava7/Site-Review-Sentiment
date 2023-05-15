@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import AddReview from "./AddReview";
+import GetSentiment from "./GetSentiment";
 
 function App() {
   const [page, togglePage] = useState<boolean>(true);
@@ -12,7 +13,7 @@ function App() {
           <input type="checkbox" onClick={() => togglePage((page) => !page)} />
           <span className="slider"></span>
         </label>
-        {page === true ? <AddReview /> : <h2>Second Page</h2>}
+        {page === true ? <AddReview /> : <GetSentiment />}
       </div>
     </>
   );
