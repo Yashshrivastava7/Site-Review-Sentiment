@@ -40,14 +40,14 @@ function AddReview() {
         <h1>Add Review</h1>
         <textarea
           rows={1}
-          cols={50}
+          cols={60}
           className="upperInput"
           placeholder="Sitename"
           onChange={handleSitename}
         />
         <textarea
           rows={10}
-          cols={50}
+          cols={60}
           placeholder="Review"
           onChange={handleReview}
         />
