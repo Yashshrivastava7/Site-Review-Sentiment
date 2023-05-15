@@ -22,7 +22,7 @@ function GetSentiment() {
       return;
     }
     const result = await data.json();
-    setReviews((old) =>
+    setReviews((_) =>
       result.map((obj: any): Review => {
         return {
           sitename: obj.sitename,
