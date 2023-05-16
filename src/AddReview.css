@@ -8,6 +8,7 @@
   border: solid;
   border-radius: 0.7rem;
   margin-top: 3rem;
+  background-color: black;
 }
 .AddReview:hover {
   color: cyan;

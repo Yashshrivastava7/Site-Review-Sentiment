@@ -26,6 +26,7 @@ h2 {
   width: 20rem;
   padding: 1rem;
   transition: box-shadow 0.25s;
+  background-color: black;
 }
 
 .input-section:hover {
