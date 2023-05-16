@@ -1,5 +1,6 @@
 .each-review {
-  min-width: 20rem;
+  width: 25rem;
+  padding: 0.2rem 0.6rem;
   text-align: center;
   border: solid 0.1rem;
   border-radius: 0.5rem;
