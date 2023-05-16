@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./GetSentiment.css";
+import Reviews from "./Reviews.tsx";
 
 type Review = {
   sitename: string;
@@ -58,7 +59,7 @@ function GetSentiment() {
       <div className="review-list">
         <h2>{sitename}</h2>
         {allReviews.map((old: Review) => {
-          return <Review review={old.review} />;
+          return <Reviews {...old} />;
         })}
       </div>
     </div>
