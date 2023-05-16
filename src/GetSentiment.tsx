@@ -19,6 +19,7 @@ function GetSentiment() {
   const [toggle, setToggle] = useState<boolean>(false);
   function handleChange(e: any) {
     setSitename(e.target.value);
+    setToggle(false);
   }
   async function handleClick() {
     const data = await fetch(`http://127.0.0.1:8000/reviews/${sitename}`, {
