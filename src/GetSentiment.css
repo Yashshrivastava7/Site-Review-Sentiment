@@ -23,7 +23,7 @@ h2 {
   justify-content: center;
   border: solid;
   border-radius: 0.8rem;
-  width: 100%;
+  width: 20rem;
   padding: 1rem;
   transition: box-shadow 0.25s;
 }

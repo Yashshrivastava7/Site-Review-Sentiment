@@ -43,6 +43,8 @@ function GetSentiment() {
         mode: "cors",
       }
     );
+    const result = await data.json();
+    setLabel(result.score);
     console.log(data);
   }
   return (
