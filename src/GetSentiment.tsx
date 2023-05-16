@@ -6,13 +6,19 @@ type Review = {
   sitename: string;
   review: string;
 };
+
+type Label = {
+  sentiment: string;
+  score: string;
+};
+
 function GetSentiment() {
   const [sitename, setSitename] = useState<string>("");
-  const [label, setLabel] = useState<string>("");
+  const [label, setLabel] = useState<Label>();
   const [allReviews, setReviews] = useState<Review[]>([]);
+  const [toggle, setToggle] = useState<boolean>(false);
   function handleChange(e: any) {
     setSitename(e.target.value);
-    setLabel(e.target.value);
   }
   async function handleClick() {
     const data = await fetch(`http://127.0.0.1:8000/reviews/${sitename}`, {
@@ -32,6 +38,7 @@ function GetSentiment() {
         };
       })
     );
+    setToggle(false);
     console.log(allReviews);
     console.log(result);
   }
@@ -43,8 +50,9 @@ function GetSentiment() {
         mode: "cors",
       }
     );
-    const result = await data.json();
-    setLabel(result.score);
+    const result: Label = await data.json();
+    setLabel(result);
+    setToggle((old) => !old);
     console.log(data);
   }
   return (
@@ -60,6 +68,13 @@ function GetSentiment() {
       </div>
       <div className="review-list">
         <h2>{sitename}</h2>
+        {toggle === true ? (
+          <h2 className="score">
+            {label?.sentiment + ": " + label?.score + "%"}
+          </h2>
+        ) : (
+          <h2></h2>
+        )}
         {allReviews.map((old: Review) => {
           return <Reviews {...old} />;
         })}

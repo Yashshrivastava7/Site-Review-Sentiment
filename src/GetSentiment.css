@@ -46,3 +46,11 @@ h2 {
   align-items: space-between;
   justify-content: space-evenly;
 }
+
+h2 {
+  margin-bottom: 0.1rem;
+}
+
+.score {
+  margin-top: 0%;
+}
