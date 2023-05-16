@@ -7,7 +7,7 @@ type Review = {
 
 function Reviews(props: Review) {
   return (
-    <div>
+    <div className="each-review">
       <h3>{props.review}</h3>
     </div>
   );
