@@ -34,18 +34,31 @@ function GetSentiment() {
     console.log(allReviews);
     console.log(result);
   }
+  async function handleSentiment() {
+    const data = await fetch(
+      `http://127.0.0.1:8000/reviews/sentiment/${sitename}`,
+      {
+        method: "GET",
+        mode: "cors",
+      }
+    );
+    console.log(data);
+  }
   return (
     <div className="GetSentiment">
       <h1>Get Sentiment</h1>
       <div className="input-section">
         <h3>Enter The Webiste</h3>
         <input type="text" placeholder="Sitename" onChange={handleChange} />
-        <button onClick={handleClick}>Submit</button>
+        <div className="button-holder">
+          <button onClick={handleClick}>Submit</button>
+          <button onClick={handleSentiment}>Get Sentiment</button>
+        </div>
       </div>
       <div className="review-list">
         <h2>{label}</h2>
         {allReviews.map((old: Review) => {
-          return <p>{old.sitename}</p>;
+          return <h3>{old.review}</h3>;
         })}
       </div>
     </div>
