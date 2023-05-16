@@ -56,9 +56,9 @@ function GetSentiment() {
         </div>
       </div>
       <div className="review-list">
-        <h2>{label}</h2>
+        <h2>{sitename}</h2>
         {allReviews.map((old: Review) => {
-          return <h3>{old.review}</h3>;
+          return <Review review={old.review} />;
         })}
       </div>
     </div>
