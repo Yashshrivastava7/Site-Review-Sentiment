@@ -50,8 +50,14 @@ h2 {
 }
 
 h2 {
+  font-size: 3rem;
   margin-top: 0.4rem;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0%;
+  transition: color 0.25s;
+}
+
+h2:hover {
+  color: cyan;
 }
 
 .score {
