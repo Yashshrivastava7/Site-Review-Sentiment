@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <div className="container">
-        <h1>Hello there!</h1>
+        <h1>Major Project!</h1>
         <label className="switch">
           <input type="checkbox" onClick={() => togglePage((page) => !page)} />
           <span className="slider"></span>
