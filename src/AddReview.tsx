@@ -1,4 +1,5 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
 import "./AddReview.css";
 
 type Review = {
@@ -16,6 +17,10 @@ function AddReview() {
     setReview(e.target.value);
   }
   async function handleClick() {
+    if (sitename.length === 0) {
+      toast.error("Please Enter the Sitename");
+      return;
+    }
     const data: Review = {
       sitename: sitename,
       review: review,
