@@ -38,6 +38,7 @@ function AddReview() {
       console.log("Something went wrong");
     }
     console.log(data);
+    toast.success("Review added successfully");
   }
   return (
     <>
