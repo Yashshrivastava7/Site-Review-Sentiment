@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./GetSentiment.css";
 import Reviews from "./Reviews.tsx";
+import toast from "react-hot-toast";
 
 type Review = {
   sitename: string;
@@ -22,6 +23,10 @@ function GetSentiment() {
     setToggle(false);
   }
   async function handleClick() {
+    if (sitename.length === 0) {
+      toast.error("Please Enter the Sitename");
+      return;
+    }
     const data = await fetch(`http://127.0.0.1:8000/reviews/${sitename}`, {
       method: "GET",
       mode: "cors",
