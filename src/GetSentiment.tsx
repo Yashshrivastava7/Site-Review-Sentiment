@@ -24,7 +24,7 @@ function GetSentiment() {
   }
   async function handleClick() {
     if (sitename.length === 0) {
-      toast.error("Please Enter the Sitename");
+      toast.error("Please Enter the Site name");
       return;
     }
     const data = await fetch(`http://127.0.0.1:8000/reviews/${sitename}`, {

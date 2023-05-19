@@ -18,7 +18,7 @@ function AddReview() {
   }
   async function handleClick() {
     if (sitename.length === 0) {
-      toast.error("Please Enter the Sitename");
+      toast.error("Please Enter the Site name");
       return;
     }
     const data: Review = {
