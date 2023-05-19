@@ -36,7 +36,7 @@ function GetSentiment() {
       return;
     }
     const result = await data.json();
-    setReviews((old) =>
+    setReviews((_) =>
       result.map((obj: any): Review => {
         return {
           sitename: obj[0],
@@ -49,6 +49,10 @@ function GetSentiment() {
     console.log(result);
   }
   async function handleSentiment() {
+    if (sitename.length === 0) {
+      toast.error("Please Enter the Site name");
+      return;
+    }
     const data = await fetch(
       `http://127.0.0.1:8000/reviews/sentiment/${sitename}`,
       {
