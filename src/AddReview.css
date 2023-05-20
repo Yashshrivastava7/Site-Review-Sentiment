@@ -8,7 +8,11 @@
   border: solid;
   border-radius: 0.7rem;
   margin-top: 3rem;
-  background-color: black;
+  background: radial-gradient(
+    circle at 47.1% 48.8%,
+    rgb(50, 50, 50) 0%,
+    rgb(0, 0, 0) 99.4%
+  );
 }
 .AddReview:hover {
   color: cyan;

@@ -6,7 +6,11 @@
   border-radius: 0.5rem;
   margin: 0.3rem;
   transition: box-shadow 0.25s;
-  background-color: black;
+  background: radial-gradient(
+    circle at 47.1% 48.8%,
+    rgb(50, 50, 50) 0%,
+    rgb(0, 0, 0) 99.4%
+  );
 }
 
 .each-review:hover {

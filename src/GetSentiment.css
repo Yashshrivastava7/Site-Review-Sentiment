@@ -26,7 +26,11 @@ h2 {
   width: 20rem;
   padding: 1rem;
   transition: box-shadow 0.25s;
-  background-color: black;
+  background: radial-gradient(
+    circle at 47.1% 48.8%,
+    rgb(50, 50, 50) 0%,
+    rgb(0, 0, 0) 99.4%
+  );
 }
 
 .input-section:hover {
