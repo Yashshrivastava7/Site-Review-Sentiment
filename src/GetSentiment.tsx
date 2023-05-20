@@ -70,7 +70,12 @@ function GetSentiment() {
       <h1>Get Sentiment</h1>
       <div className="input-section">
         <h3>Enter The Webiste</h3>
-        <input type="text" placeholder="Sitename" onChange={handleChange} />
+        <textarea
+          rows={1}
+          cols={30}
+          placeholder="Sitename"
+          onChange={handleChange}
+        />
         <div className="button-holder">
           <button onClick={handleClick}>Submit</button>
           <button onClick={handleSentiment}>Get Sentiment</button>
