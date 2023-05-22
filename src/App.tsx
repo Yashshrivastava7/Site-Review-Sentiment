@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import AddReview from "./AddReview";
 import GetSentiment from "./GetSentiment";
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const [page, togglePage] = useState<boolean>(true);
