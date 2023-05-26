@@ -17,12 +17,12 @@ function GetSentiment() {
   const [sitename, setSitename] = useState<string>("");
   const [label, setLabel] = useState<Label>();
   const [allReviews, setReviews] = useState<Review[]>([]);
-  const [toggle, setToggle] = useState<boolean>(false);
+  const [displayInfoToggle, setToggle] = useState<boolean>(false);
   function handleChange(e: any) {
     setSitename(e.target.value);
     setToggle(false);
   }
-  async function handleClick() {
+  async function handleSubmit() {
     if (sitename.length === 0) {
       toast.error("Please Enter the Site name");
       return;
@@ -77,13 +77,13 @@ function GetSentiment() {
           onChange={handleChange}
         />
         <div className="button-holder">
-          <button onClick={handleClick}>Submit</button>
+          <button onClick={handleSubmit}>Submit</button>
           <button onClick={handleSentiment}>Get Sentiment</button>
         </div>
       </div>
       <div className="review-list">
         <h2>{sitename}</h2>
-        {toggle === true ? (
+        {displayInfoToggle ? (
           <h2 className="score">
             {label?.sentiment + ": " + label?.score + "%"}
           </h2>
