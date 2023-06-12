@@ -31,7 +31,7 @@
 }
 
 .switch:hover {
-  box-shadow: 5px 5px 50px 6px cyan;
+  box-shadow: 4px 5px 50px -4px cyan;
 }
 
 .switch input {
