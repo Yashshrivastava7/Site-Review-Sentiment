@@ -16,7 +16,7 @@
 }
 .AddReview:hover {
   color: cyan;
-  box-shadow: 5px 5px 50px 6px cyan;
+  box-shadow: 4px 5px 80px -20px cyan;
 }
 
 h1:hover {
